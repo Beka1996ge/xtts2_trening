@@ -1,0 +1,9 @@
+{
+  "model": {
+    "speaker_encoder": {
+      "model_name": "microsoft/wavlm-base-plus",
+      "type": "wavlm",
+      "embedding_dim": 768
+    }
+  }
+}

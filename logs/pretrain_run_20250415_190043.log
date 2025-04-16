@@ -1,0 +1,11 @@
+2025-04-15 19:00:43,130 - run_pretrain - INFO - ლოგების ფაილი: logs/pretrain_run_20250415_190043.log
+2025-04-15 19:00:43,130 - run_pretrain - INFO - კონფიგურაცია: {'language': 'ka', 'checkpoint_dir': 'checkpoints/', 'checkpoint_interval': 5000, 'log_dir': 'logs/', 'base_model_path': 'models/base_xtts_v2/', 'output_model_path': 'models/xtts_v2_ka/', 'data_dir': 'data/split/', 'batch_size': 32, 'learning_rate': 0.0001, 'epochs': 100, 'device': 'cuda', 'seed': 42, 'max_steps': None, 'optimizer': 'AdamW', 'lr_scheduler': 'CosineAnnealingLR', 'language_model': {'model_type': 'transformer', 'vocab_size': 50000, 'hidden_size': 768, 'num_hidden_layers': 6, 'num_attention_heads': 12, 'intermediate_size': 3072, 'hidden_act': 'gelu', 'dropout_prob': 0.1}, 'phoneme_model': {'use_espeak': True, 'phoneme_dict_path': 'data/phoneme_dict_ka.json', 'g2p_type': 'transformer', 'hidden_size': 512, 'num_hidden_layers': 4, 'num_attention_heads': 8, 'dropout_prob': 0.1}, 'xtts_model': {'speaker_embedding_dim': 512, 'use_speaker_encoder': True, 'vocoder': 'hifigan', 'use_duration_predictor': True, 'fine_tune_decoder': True, 'decoder_config': {'hidden_size': 768, 'num_layers': 12, 'num_attention_heads': 12}}, 'training': {'grad_clip_thresh': 1.0, 'weight_decay': 0.01, 'warmup_steps': 5000, 'valid_steps': 2000, 'num_workers': 4, 'use_fp16': True, 'early_stopping_patience': 10}}
+2025-04-15 19:00:43,131 - run_pretrain - INFO - ===== XTTS-v2 მოდელის პრეტრეინინგის პროცესის დაწყება =====
+2025-04-15 19:00:43,131 - run_pretrain - INFO - ----- 1. ემბედინგების ადაპტერის გაშვება -----
+2025-04-15 19:00:43,131 - run_pretrain - INFO - ემბედინგების ადაპტერის გაშვება
+2025-04-15 19:00:43,131 - run_pretrain - INFO - ბრძანების გაშვება: python embedding_adapter.py --config xtts_pretrain_config.json 
+2025-04-15 19:00:44,796 - run_pretrain - INFO - პროგრესი შენახულია: models/xtts_v2_ka/pretrain_progress.json
+2025-04-15 19:00:44,796 - run_pretrain - INFO - ----- 2. ფონემების პროცესორის გაშვება -----
+2025-04-15 19:00:44,796 - run_pretrain - INFO - ფონემების პროცესორის გაშვება
+2025-04-15 19:00:44,796 - run_pretrain - INFO - ბრძანების გაშვება: python phoneme_processor.py --config xtts_pretrain_config.json
+2025-04-15 19:00:45,766 - run_pretrain - ERROR - ფონემების პროცესორის გაშვებისას მოხდა შეცდომა, გასვლის კოდი: 256

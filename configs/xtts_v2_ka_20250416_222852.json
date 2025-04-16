@@ -1,0 +1,86 @@
+{
+  "model_name": "xtts_v2_ka",
+  "run_name": "xtts_v2_georgian_training",
+  "# მოდელის პარამეტრები": "",
+  "pretrained_model_path": "models/xtts_v2_ka/pretrained.pth",
+  "speaker_encoder": {
+    "model_path": "models/base_xtts_v2/speaker_encoder.pth",
+    "config_path": "models/base_xtts_v2/speaker_encoder_config.json"
+  },
+  "language_id": "ka",
+  "# მონაცემების პარამეტრები": "",
+  "data_path": "data/split",
+  "output_path": "models/xtts_v2_ka",
+  "# ტრენინგის პარამეტრები": "",
+  "batch_size": 16,
+  "eval_batch_size": 8,
+  "num_loader_workers": 4,
+  "num_eval_loader_workers": 2,
+  "epochs": 100,
+  "save_step": 5000,
+  "print_step": 100,
+  "eval_step": 1000,
+  "# ოპტიმიზაციის პარამეტრები": "",
+  "learning_rate": 0.0002,
+  "min_learning_rate": 1e-05,
+  "weight_decay": 1e-06,
+  "grad_clip_threshold": 1.0,
+  "# გრადიენტების აკუმულაცია მცირე GPU მეხსიერებისთვის": "",
+  "grad_accum_steps": 2,
+  "# აუდიოს პარამეტრები": "",
+  "audio": {
+    "sample_rate": 16000,
+    "win_length": 1024,
+    "hop_length": 256,
+    "num_mels": 80,
+    "mel_fmin": 0,
+    "mel_fmax": 8000
+  },
+  "# მოდელის არქიტექტურის პარამეტრები": "",
+  "model_params": {
+    "use_speaker_embedding": true,
+    "speaker_embedding_dim": 512,
+    "use_d_vector_file": true,
+    "d_vector_file": "data/embeddings/embeddings",
+    "d_vector_dim": 512,
+    "# ენკოდერის პარამეტრები": "",
+    "encoder_params": {
+      "hidden_channels": 192,
+      "filter_channels": 768,
+      "filter_channels_dp": 256,
+      "n_heads": 2,
+      "n_layers": 6,
+      "kernel_size": 3,
+      "p_dropout": 0.1,
+      "window_size": 4
+    },
+    "# დეკოდერის პარამეტრები": "",
+    "decoder_params": {
+      "hidden_channels": 192,
+      "filter_channels": 768,
+      "filter_channels_dp": 256,
+      "n_heads": 2,
+      "n_layers": 6,
+      "kernel_size": 3,
+      "p_dropout": 0.1,
+      "window_size": 4
+    }
+  },
+  "# დანაკარგის პარამეტრები": "",
+  "loss_params": {
+    "kl_loss_alpha": 1.0,
+    "kl_loss_lambda": 1.0
+  },
+  "# ფონემების პარამეტრები": "",
+  "phoneme_params": {
+    "use_phonemes": true,
+    "phoneme_language": "ka",
+    "text_cleaner": "basic_cleaners"
+  },
+  "# tensorboard პარამეტრები": "",
+  "dashboard_logger": "tensorboard",
+  "logger_parameters": {
+    "log_dir": "logs/xtts_v2_ka",
+    "flush_secs": 30
+  }
+}

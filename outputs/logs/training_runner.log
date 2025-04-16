@@ -1,0 +1,129 @@
+2025-04-15 21:29:03,944 - root - INFO - ტრენინგი გაგრძელდება ბოლო ჩექფოინტიდან
+2025-04-15 21:29:03,973 - root - INFO - გამოყენებული მოწყობილობა: mps
+2025-04-15 21:29:03,973 - root - INFO - ტრენინგის მომზადება...
+2025-04-15 21:29:04,632 - root - INFO - მოდელი შეიქმნა და გადავიდა მოწყობილობაზე
+2025-04-15 21:29:04,634 - root - ERROR - კრიტიკული შეცდომა ტრენინგის პროცესში: [Errno 2] No such file or directory: '/Users/b2/Desktop/python projects/xtts2_trening/data/train_metadata.csv'
+Traceback (most recent call last):
+  File "/Users/b2/Desktop/python projects/xtts2_trening/run_training.py", line 158, in main
+    trainer.setup()
+  File "/Users/b2/Desktop/python projects/xtts2_trening/trainer.py", line 84, in setup
+    self.train_loader, self.val_loader = create_dataloaders(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/data_loader.py", line 167, in create_dataloaders
+    train_dataset = XTTSDataset(train_metadata, audio_dir)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/data_loader.py", line 41, in __init__
+    self.metadata = pd.read_csv(metadata_file)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/b2/Desktop/python projects/xtts2_trening/data/train_metadata.csv'
+2025-04-15 21:29:04,653 - root - INFO - ხელახლა ცდა 1/5 60 წამში...
+2025-04-15 21:29:51,168 - root - INFO - მიღებულია კლავიატურის წყვეტის სიგნალი (Ctrl+C)
+2025-04-15 21:29:51,171 - root - INFO - მიმდინარეობს ტრენინგის უსაფრთხო შეჩერება...
+2025-04-15 21:29:51,171 - root - INFO - მოთხოვნილია ტრენინგის შეჩერება...
+2025-04-15 21:29:51,171 - root - INFO - პროგრამა მთავრდება
+2025-04-15 21:30:01,774 - root - INFO - ტრენინგი გაგრძელდება ბოლო ჩექფოინტიდან
+2025-04-15 21:30:01,790 - root - INFO - გამოყენებული მოწყობილობა: mps
+2025-04-15 21:30:01,790 - root - INFO - ტრენინგის მომზადება...
+2025-04-15 21:30:02,186 - root - INFO - მოდელი შეიქმნა და გადავიდა მოწყობილობაზე
+2025-04-15 21:30:02,187 - root - ERROR - კრიტიკული შეცდომა ტრენინგის პროცესში: [Errno 2] No such file or directory: '/Users/b2/Desktop/python projects/xtts2_trening/data/train_metadata.csv'
+Traceback (most recent call last):
+  File "/Users/b2/Desktop/python projects/xtts2_trening/run_training.py", line 158, in main
+    trainer.setup()
+  File "/Users/b2/Desktop/python projects/xtts2_trening/trainer.py", line 84, in setup
+    self.train_loader, self.val_loader = create_dataloaders(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/data_loader.py", line 167, in create_dataloaders
+    train_dataset = XTTSDataset(train_metadata, audio_dir)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/data_loader.py", line 41, in __init__
+    self.metadata = pd.read_csv(metadata_file)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/b2/Desktop/python projects/xtts2_trening/data/train_metadata.csv'
+2025-04-15 21:30:02,190 - root - INFO - ხელახლა ცდა 1/5 60 წამში...
+2025-04-15 21:30:55,249 - root - INFO - მიღებულია კლავიატურის წყვეტის სიგნალი (Ctrl+C)
+2025-04-15 21:30:55,249 - root - INFO - მიმდინარეობს ტრენინგის უსაფრთხო შეჩერება...
+2025-04-15 21:30:55,249 - root - INFO - მოთხოვნილია ტრენინგის შეჩერება...
+2025-04-15 21:30:55,249 - root - INFO - პროგრამა მთავრდება
+2025-04-15 21:31:08,671 - root - INFO - ტრენინგი გაგრძელდება ბოლო ჩექფოინტიდან
+2025-04-15 21:31:08,694 - root - INFO - გამოყენებული მოწყობილობა: mps
+2025-04-15 21:31:08,694 - root - INFO - ტრენინგის მომზადება...
+2025-04-15 21:31:09,147 - root - INFO - მოდელი შეიქმნა და გადავიდა მოწყობილობაზე
+2025-04-15 21:31:09,154 - data_loader - WARNING - ფაილი ვერ მოიძებნა: /Users/b2/Desktop/python projects/xtts2_trening/data/wavs/wavs/sample001.wav
+2025-04-15 21:31:09,155 - data_loader - WARNING - ფაილი ვერ მოიძებნა: /Users/b2/Desktop/python projects/xtts2_trening/data/wavs/wavs/sample002.wav
+2025-04-15 21:31:09,155 - data_loader - WARNING - ფაილი ვერ მოიძებნა: /Users/b2/Desktop/python projects/xtts2_trening/data/wavs/wavs/sample003.wav
+2025-04-15 21:31:09,155 - data_loader - INFO - ვალიდური ფაილების რაოდენობა: 0
+2025-04-15 21:31:09,156 - data_loader - INFO - ჩატვირთულია 0 ჩანაწერი მეტადატადან /Users/b2/Desktop/python projects/xtts2_trening/data/train_metadata.csv
+2025-04-15 21:31:09,157 - data_loader - WARNING - ფაილი ვერ მოიძებნა: /Users/b2/Desktop/python projects/xtts2_trening/data/wavs/wavs/sample004.wav
+2025-04-15 21:31:09,157 - data_loader - WARNING - ფაილი ვერ მოიძებნა: /Users/b2/Desktop/python projects/xtts2_trening/data/wavs/wavs/sample005.wav
+2025-04-15 21:31:09,157 - data_loader - INFO - ვალიდური ფაილების რაოდენობა: 0
+2025-04-15 21:31:09,158 - data_loader - INFO - ჩატვირთულია 0 ჩანაწერი მეტადატადან /Users/b2/Desktop/python projects/xtts2_trening/data/val_metadata.csv
+2025-04-15 21:31:09,158 - data_loader - INFO - ტრენინგის დატასეტის ზომა: 0
+2025-04-15 21:31:09,158 - data_loader - INFO - ვალიდაციის დატასეტის ზომა: 0
+2025-04-15 21:31:09,158 - root - ERROR - კრიტიკული შეცდომა ტრენინგის პროცესში: num_samples should be a positive integer value, but got num_samples=0
+Traceback (most recent call last):
+  File "/Users/b2/Desktop/python projects/xtts2_trening/run_training.py", line 158, in main
+    trainer.setup()
+  File "/Users/b2/Desktop/python projects/xtts2_trening/trainer.py", line 84, in setup
+    self.train_loader, self.val_loader = create_dataloaders(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/data_loader.py", line 176, in create_dataloaders
+    train_loader = DataLoader(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 383, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/torch/utils/data/sampler.py", line 165, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+2025-04-15 21:31:09,159 - root - INFO - ხელახლა ცდა 1/5 60 წამში...
+2025-04-15 21:31:44,160 - root - INFO - მიღებულია კლავიატურის წყვეტის სიგნალი (Ctrl+C)
+2025-04-15 21:31:44,163 - root - INFO - მიმდინარეობს ტრენინგის უსაფრთხო შეჩერება...
+2025-04-15 21:31:44,164 - root - INFO - მოთხოვნილია ტრენინგის შეჩერება...
+2025-04-15 21:31:44,164 - root - INFO - პროგრამა მთავრდება
+2025-04-15 21:42:35,401 - root - INFO - ტრენინგი გაგრძელდება ბოლო ჩექფოინტიდან
+2025-04-15 21:42:35,419 - root - INFO - გამოყენებული მოწყობილობა: mps
+2025-04-15 21:42:35,419 - root - INFO - ტრენინგის მომზადება...
+2025-04-15 21:42:35,854 - root - INFO - მოდელი შეიქმნა და გადავიდა მოწყობილობაზე
+2025-04-15 21:42:35,864 - data_loader - INFO - ვალიდური ფაილების რაოდენობა: 0
+2025-04-15 21:42:35,864 - data_loader - INFO - ჩატვირთულია 0 ჩანაწერი მეტადატადან /Users/b2/Desktop/python projects/xtts2_trening/data/train_metadata.csv
+2025-04-15 21:42:35,878 - data_loader - INFO - ვალიდური ფაილების რაოდენობა: 2
+2025-04-15 21:42:35,878 - data_loader - INFO - ჩატვირთულია 2 ჩანაწერი მეტადატადან /Users/b2/Desktop/python projects/xtts2_trening/data/val_metadata.csv
+2025-04-15 21:42:35,878 - data_loader - INFO - ტრენინგის დატასეტის ზომა: 0
+2025-04-15 21:42:35,878 - data_loader - INFO - ვალიდაციის დატასეტის ზომა: 2
+2025-04-15 21:42:35,878 - root - ERROR - კრიტიკული შეცდომა ტრენინგის პროცესში: num_samples should be a positive integer value, but got num_samples=0
+Traceback (most recent call last):
+  File "/Users/b2/Desktop/python projects/xtts2_trening/run_training.py", line 158, in main
+    trainer.setup()
+  File "/Users/b2/Desktop/python projects/xtts2_trening/trainer.py", line 84, in setup
+    self.train_loader, self.val_loader = create_dataloaders(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/data_loader.py", line 176, in create_dataloaders
+    train_loader = DataLoader(
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 383, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/Users/b2/Desktop/python projects/xtts2_trening/.venv/lib/python3.9/site-packages/torch/utils/data/sampler.py", line 165, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+2025-04-15 21:42:35,892 - root - INFO - ხელახლა ცდა 1/5 60 წამში...
+2025-04-15 21:42:43,083 - root - INFO - მიღებულია კლავიატურის წყვეტის სიგნალი (Ctrl+C)
+2025-04-15 21:42:43,083 - root - INFO - მიმდინარეობს ტრენინგის უსაფრთხო შეჩერება...
+2025-04-15 21:42:43,084 - root - INFO - მოთხოვნილია ტრენინგის შეჩერება...
+2025-04-15 21:42:43,084 - root - INFO - პროგრამა მთავრდება

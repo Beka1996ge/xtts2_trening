@@ -1,0 +1,8 @@
+{
+  "language": "ka",
+  "use_espeak": true,
+  "phoneme_dict_path": "models/xtts_v2_ka/phoneme_dict_ka.json",
+  "model_path": "models/xtts_v2_ka/g2p_model.pt",
+  "grapheme_dim": 57,
+  "phoneme_dim": 57
+}

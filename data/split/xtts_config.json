@@ -1,0 +1,27 @@
+{
+    "output_path": "xtts_output",
+    "model": {
+        "language": "ka",
+        "run_name": "xtts_ka"
+    },
+    "audio": {
+        "sample_rate": 16000
+    },
+    "datasets": [
+        {
+            "name": "common_voice_ka",
+            "path": "data/split/train",
+            "meta_file_train": "metadata_xtts.csv",
+            "meta_file_val": "../val/metadata_xtts.csv"
+        }
+    ],
+    "trainer": {
+        "max_epochs": 1000,
+        "batch_size": 16,
+        "eval_batch_size": 8,
+        "gradient_clip": 5.0,
+        "iterations_per_checkpoint": 1000,
+        "target_loss": "mse",
+        "grad_accum": 1
+    }
+}

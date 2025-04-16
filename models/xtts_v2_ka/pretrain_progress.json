@@ -1,0 +1,12 @@
+{
+  "started_at": "2025-04-15T21:08:15.101272",
+  "last_updated": "2025-04-15T21:08:20.782928",
+  "steps": {
+    "prepare_embeddings": true,
+    "language_model": true,
+    "phoneme_model": true,
+    "xtts_init": true,
+    "full_pretrain": true
+  },
+  "checkpoints": {}
+}

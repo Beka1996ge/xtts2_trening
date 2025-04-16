@@ -1,0 +1,57 @@
+{
+  "language": "ka",
+  "checkpoint_dir": "checkpoints/",
+  "checkpoint_interval": 5000,
+  "log_dir": "logs/",
+  "base_model_path": "models/base_xtts_v2/",
+  "output_model_path": "models/xtts_v2_ka/",
+  "data_dir": "data/split/",
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "epochs": 100,
+  "device": "cpu",
+  "seed": 42,
+  "max_steps": null,
+  "optimizer": "AdamW",
+  "lr_scheduler": "CosineAnnealingLR",
+  "language_model": {
+    "model_type": "transformer",
+    "vocab_size": 50000,
+    "hidden_size": 768,
+    "num_hidden_layers": 6,
+    "num_attention_heads": 12,
+    "intermediate_size": 3072,
+    "hidden_act": "gelu",
+    "dropout_prob": 0.1
+  },
+  "phoneme_model": {
+    "use_espeak": true,
+    "phoneme_dict_path": "data/phoneme_dict_ka.json",
+    "g2p_type": "transformer",
+    "hidden_size": 512,
+    "num_hidden_layers": 4,
+    "num_attention_heads": 8,
+    "dropout_prob": 0.1
+  },
+  "xtts_model": {
+    "speaker_embedding_dim": 512,
+    "use_speaker_encoder": true,
+    "vocoder": "hifigan",
+    "use_duration_predictor": true,
+    "fine_tune_decoder": true,
+    "decoder_config": {
+      "hidden_size": 768,
+      "num_layers": 12,
+      "num_attention_heads": 12
+    }
+  },
+  "training": {
+    "grad_clip_thresh": 1.0,
+    "weight_decay": 0.01,
+    "warmup_steps": 5000,
+    "valid_steps": 2000,
+    "num_workers": 4,
+    "use_fp16": true,
+    "early_stopping_patience": 10
+  }
+}
